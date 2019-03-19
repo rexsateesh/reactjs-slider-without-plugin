@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.slider{
+    width: 1000px;
+    height: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+.slider .slides {position: relative; width: 100%;}
+.slider .slides .slide {
+    width: 1000px;
+    height: 500px;
+    background: #333;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+.slider .btn-wrap{
+    position: absolute;
+    top: 49%;
+    width: 100%;
+}
+
+/*Buttons*/
+.slider .btn-wrap > button{
+    position: absolute;
+}
+.slider .btn-wrap > button img{width: 50px;}
+.slider .btn-wrap .prev-btn{
+    left: -1px;
+}
+.slider .btn-wrap .next-btn{
+    right: -1px;
+}
+
+/*Animation*/
+@-webkit-keyframes moveIn {
+    100% { left: 0; }
+}
+@keyframes moveIn {
+    100% { left: 0; }
+}
+.moveInRight {
+	left: -100%;
+	-webkit-animation: moveIn 1s forwards;
+    animation: moveIn 1s forwards;
+}
+.moveInLeft {
+	left: 100%;
+	-webkit-animation: moveIn 1s forwards;
+    animation: moveIn 1s forwards;
+}
+
+@-webkit-keyframes moveOutLeft {
+    100% { left: -100%; }
+}
+@keyframes moveOutLeft {
+    100% { left: -100%; }
+}
+.moveOutLeft {
+	-webkit-animation: moveOutLeft 1s forwards;
+    animation: moveOutLeft 1s forwards;
+}
+
+@-webkit-keyframes moveOutRight {
+    100% { left: 100%; }
+}
+@keyframes moveOutRight {
+    100% { left: 100%; }
+}
+.moveOutRight {
+	-webkit-animation: moveOutRight 1s forwards;
+    animation: moveOutRight 1s forwards;
+}
