@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Slider from './Slider'
+import Slider from './components/slider/Slider'
 // import logo from './logo.svg';
 import './App.css';
 
